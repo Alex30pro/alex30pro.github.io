@@ -1,4 +1,4 @@
-/* FONTES E VARIÁVEIS DE COR */
+
 :root {
     --bg-primary: #0F172A; /* slate-900 */
     --surface: #1E293B;   /* slate-800 */
@@ -10,7 +10,6 @@
     --font-family: 'Inter', sans-serif;
 }
 
-/* RESET E ESTILOS GLOBAIS */
 * {
     margin: 0;
     padding: 0;
@@ -40,7 +39,6 @@ body {
     margin-bottom: 3rem;
 }
 
-/* ANIMAÇÃO DE ENTRADA (PRE-LOADER) */
 #intro-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -75,7 +73,6 @@ body {
     100% { opacity: 0; transform: translateY(-1rem); }
 }
 
-/* CABEÇALHO */
 header {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -110,7 +107,6 @@ header nav {
     gap: 1.5rem;
 }
 
-/* SEÇÃO HERO */
 #hero {
     position: relative;
     text-align: center;
@@ -187,7 +183,6 @@ header nav {
     box-shadow: 0 7px 14px rgba(0,0,0,0.2);
 }
 
-/* SEÇÃO SOBRE MIM */
 .about-content {
     max-width: 896px;
     margin-left: auto;
@@ -221,7 +216,6 @@ header nav {
 }
 .about-text p { margin-bottom: 1rem; }
 
-/* SEÇÃO DE IDIOMAS */
 .language-cards {
     max-width: 896px;
     margin-left: auto; margin-right: auto;
@@ -267,7 +261,6 @@ header nav {
     color: #D1D5DB;
 }
 
-/* SEÇÃO DE HABILIDADES */
 .skill-cards {
     max-width: 896px;
     margin-left: auto; margin-right: auto;
@@ -297,7 +290,6 @@ header nav {
 }
 .skill-card span { font-weight: 500; }
 
-/* SEÇÃO DE PROJETOS */
 .project-cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -339,7 +331,6 @@ header nav {
 }
 .project-card a.disabled { color: var(--text-secondary); cursor: not-allowed; }
 
-/* SEÇÃO DE CONTATO */
 #contact { text-align: center; }
 .contact-subtitle {
     max-width: 672px;
@@ -369,7 +360,6 @@ header nav {
     height: 2rem; /* 32px */
 }
 
-/* RODAPÉ */
 footer {
     background-color: #020617; /* slate-950 */
     border-top: 1px solid var(--border);
@@ -379,42 +369,44 @@ footer .container {
     text-align: center;
     color: var(--text-secondary);
 }
-/* EFEITO DE HOVER NA FOTO DE PERFIL */
 
-/* 1. Define o container como o ponto de referência para o posicionamento */
 .profile-image-container {
     position: relative; /* Essencial para o posicionamento das imagens dentro dele */
 }
 
-/* 2. Regra para AMBAS as imagens dentro do container */
 .profile-image-container .profile-image {
     position: absolute; /* Coloca uma imagem em cima da outra */
     inset: 0; /* Shorthand para top:0, right:0, bottom:0, left:0 */
     transition: opacity 0.5s ease-in-out; /* A animação suave de troca */
 }
 
-/* 3. Por padrão, a imagem ilustrada começa invisível (transparente) */
 .profile-image-container .image-ilustrada {
     opacity: 0;
 }
 
-/* 4. A MÁGICA: Quando o mouse passa por cima do CONTAINER... */
-
-/* ... a imagem real fica invisível */
 .profile-image-container:hover .image-real {
     opacity: 0;
 }
-
-/* ... e a imagem ilustrada, que estava invisível, fica visível */
 .profile-image-container:hover .image-ilustrada {
     opacity: 1;
 }
-
-/* AJUSTE DE ZOOM NA FOTO ILUSTRADA */
 .profile-image-container .image-ilustrada {
     object-fit: contain; /* Garante que a imagem inteira apareça, sem cortar */
 }
-/* AJUSTE DE ZOOM NA FOTO REAL (OPCIONAL) */
 .profile-image-container .image-real {
     object-fit: contain;
+}
+
+body::before {
+    content: ''; /* Essencial para o pseudo-elemento funcionar */
+    position: fixed; /* Fica fixo e não rola com a página */
+    top: 0;
+    left: 0;
+    width: 100vw; /* 100% da largura da tela */
+    height: 100vh; /* 100% da altura da tela */
+    background-image: url('images/fundo-tech.jpg'); /* Caminho para a sua imagem */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* A MÁGICA: Deixa a imagem bem sutil. Ajuste entre 0.05 e 0.2 para o seu gosto. */
+    z-index: -1; /* Coloca a imagem atrás de todo o conteúdo */
 }
