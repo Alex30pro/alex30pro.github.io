@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Andryo - Desenvolvedor Backend</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <script src="https://kit.fontawesome.com/c38641a365.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-primary text-primary">
+
+    <div id="intro-overlay">
+        <div id="intro-text-container">
+            </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <a href="#" class="nav-link logo">Alex Araujo</a>
+            <nav>
+                <a href="#about" class="nav-link">Sobre Mim</a>
+                <a href="#skills" class="nav-link">Habilidades</a>
+                <a href="#projects" class="nav-link">Projetos</a>
+                <a href="#contact" class="nav-link">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="hero">
+            <div class="background-blob"></div>
+            <div class="hero-content">
+                <h1 class="greeting">
+                    <span>Olá, sou o </span>
+                    <span class="highlight">Alex</span>
+                    <span class="wave">👋</span>
+                </h1>
+                <p class="subtitle">Desenvolvedor Backend | Apaixonado por Tecnologia e Soluções Criativas</p>
+                <div class="button-group">
+                    <a href="#projects" class="main-button">Meus Projetos</a>
+                    <a href="https://github.com/Alex30pro" target="_blank" rel="noopener noreferrer" class="secondary-button">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section-divider">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                 <div class="profile-image-container">
+                <img src="imagens/foto-real.png" alt="Foto de Alex Andryo" class="profile-image image-real">
+                <img src="imagens/foto-ilustrada.png" alt="Ilustração de Alex Andryo" class="profile-image image-ilustrada">
+            </div>
+                <div class="about-text">
+                    <p>Profissional com sólida experiência em Operações e Logística, atualmente em transição de carreira para a área de Tecnologia. Minha jornada me proporcionou um pensamento analítico e foco em resolução de problemas, habilidades que agora aplico no desenvolvimento de software backend.</p>
+                    <p>Sou proativo, focado no aprendizado contínuo e busco contribuir com projetos que integrem tecnologia e gestão operacional.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="languages" class="section-divider">
+            <h2 class="section-title">Idiomas</h2>
+            <div class="language-cards">
+                <div class="language-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg');">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <p>Português</p>
+                        <small>Nativo</small>
+                    </div>
+                </div>
+                <div class="language-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg');">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <p>Inglês</p>
+                        <small>Intermediário</small>
+                    </div>
+                </div>
+                <div class="language-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg');">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <p>Espanhol</p>
+                        <small>Intermediário</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section-divider">
+             <h2 class="section-title">Minhas Habilidades</h2>
+             <div class="skill-cards">
+                <div class="skill-card"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+                <div class="skill-card"><i class="devicon-nodejs-plain-wordmark"></i><span>Node.js</span></div>
+                <div class="skill-card"><i class="devicon-express-original"></i><span>Express</span></div>
+                <div class="skill-card"><i class="devicon-mongodb-plain-wordmark"></i><span>MongoDB</span></div>
+                <div class="skill-card"><i class="devicon-mysql-plain-wordmark"></i><span>MySQL</span></div>
+                <div class="skill-card"><i class="devicon-laravel-plain-wordmark"></i><span>Laravel</span></div>
+                
+                <div class="skill-card"><i class="devicon-html5-plain-wordmark"></i><span>HTML5</span></div>
+                <div class="skill-card"><i class="devicon-css3-plain-wordmark"></i><span>CSS3</span></div>
+            </div>
+        </section>
+
+        <section id="projects" class="section-divider">
+            <h2 class="section-title">Projetos Recentes</h2>
+            <div class="project-cards">
+                <div class="project-card">
+                    <h3>API BeatFlow</h3>
+                    <p>API RESTful para gerenciar músicas e playlists. Feita com Node.js, Express e MongoDB, com foco em código limpo e relacionamento de dados.</p>
+                    <div class="project-tags"><span>Node.js</span><span>Express</span><span>MongoDB</span></div>
+                    <a href="https://github.com/Alex30pro/beatflow" target="_blank">Ver no GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Bem-Estar Estudantil</h3>
+                    <p>Projeto conceitual de um Hackathon para aumentar a segurança e bem-estar em escolas, usando reconhecimento facial e análise de humor.</p>
+                    <div class="project-tags"><span>Visão de Produto</span><span>Inovação</span></div>
+                    <a href="#" class="disabled">Conceitual</a>
+                </div>
+                <div class="project-card">
+                    <h3>Em Breve</h3>
+                    <p>Estou sempre trabalhando em novos projetos. Volte em breve para mais novidades e desafios de código!</p>
+                    <div class="project-tags"><span>Backend</span><span>Estudo</span></div>
+                    <a href="#" class="disabled">Aguarde</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-divider">
+             <h2 class="section-title">Vamos Conversar!</h2>
+             <p class="contact-subtitle">Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato.</p>
+             <div class="contact-links">
+    <a href="https://wa.me/5542998271347" target="_blank" title="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.8 0-67.6-9.5-97.2-26.7l-7-4.1-72.5 19 19.3-70.6-4.5-7.4c-18.5-30.3-28.2-65.3-28.2-101.5 0-109.9 89.5-199.5 199.8-199.5 54.5 0 105.7 21.2 144.9 59.8 39.1 38.6 60.1 90.1 60.1 144.8 0 109.9-89.6 199.5-199.8 199.5zm88.8-111.9c-.2-.4-.7-.5-1.5-.9s-4.6-2.3-5.3-2.5c-.7-.2-1.2-.4-1.7.4s-2 2.5-2.4 3c-.5.5-1 .6-1.8.2s-3.4-.9-6.4-3.9c-2.4-2.4-4-5.4-5.6-7.9s-1.2-1.9-1.2-3.2.3-1.6.7-2.2c.4-.6.8-1.1 1.2-1.5.3-.3.6-.6.8-.9.3-.3.3-.6.1-1.1s-1.7-4-2-5.5c-.3-1.5-.6-1.3-.8-1.3s-.5-.1-1.1-.1h-.9c-.5 0-1.3.2-2 .6s-2.7 2.6-2.7 6.4c0 3.8 2.8 7.4 3.1 7.9s5.4 8.2 13 11.4c1.6.7 2.9 1.1 3.9 1.4 2.2.6 4.1.5 5.6.3 1.7-.2 5.3-2.2 6-4.3s.7-3.9.5-4.3c-.2-.4-.7-.6-1.5-.9z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/alex_andryo/" target="_blank" title="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.5-147.9-2.5-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.5 37-2.5 147.8 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9 26.3 26.2 58 34.4 93.9 36.2 37 2.5 147.9 2.5 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.5-37 2.5-147.8 0-184.9zM338 388.9c-20.8 20.8-48.2 32.2-76.8 34.4-33.7 2.1-131.9 2.1-165.6 0-28.7-2.1-56.1-13.5-76.8-34.4-20.8-20.8-32.2-48.2-34.4-76.8-2.1-33.7-2.1-131.9 0-165.6 2.1-28.7 13.5-56.1 34.4-76.8 20.8-20.8 48.2-32.2 76.8-34.4 33.7-2.1 131.9-2.1 165.6 0 28.7 2.1 56.1 13.5 76.8 34.4 20.8 20.8 32.2 48.2 34.4 76.8 2.1 33.7 2.1 131.9 0 165.6-2.1 28.7-13.5 56.1-34.4 76.8z"/></svg>
+    </a>
+    <a href="mailto:alexandryopg87@gmail.com" target="_blank" title="E-mail">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M48 64C21.5 64 0 85.5 0 112v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zM0 112V82.2c26.3 0 49.3 14.1 61.5 35.8L48 112H0zM48 96h416c1.4 0 2.8.1 4.2.2L290.7 251.2c-12.2 10.1-28.2 10.1-40.4 0L43.8 96.2C45.2 96.1 46.6 96 48 96zM464 416H48c-1.4 0-2.8-.1-4.2-.2L195.3 260.8c12.2-10.1 28.2-10.1 40.4 0L390.2 415.8c-1.4.1-2.8.2-4.2.2zM512 399.8V112h-48v259.9c0 10.7-8.7 19.4-19.4 19.4c-2 0-4-.3-5.9-.9L320 310.5V112h48v16.2c-12.2 21.7-35.2 35.8-61.5 35.8H192c-26.3 0-49.3-14.1-61.5-35.8V112h48v198.5L59.7 415.1c-1.9.6-3.9.9-5.9.9c-10.7 0-19.4-8.7-19.4-19.4V112H0v287.8c0 10.7 8.7 19.4 19.4 19.4c2 0 4-.3 5.9-.9l168.2-139.5c.2.1.3.2.5.3c12.2 10.1 28.2 10.1 40.4 0c.2-.1.3-.2.5-.3l168.2 139.5c1.9.6 3.9.9 5.9.9c10.7 0 19.4-8.7 19.4-19.4z"/></svg>
+    </a>
+    <a href="https://github.com/Alex30pro" target="_blank" title="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3.3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-27.9-112.3-124.3 0-27.5 10.1-49.9 26.4-67.5-2.6-6.2-11.5-32.3 2.6-66.2 0 0 21.2-6.8 69.7 26.1 20.1-5.6 41.6-8.4 62.2-8.4 20.6 0 42.1 2.8 62.2 8.4 48.4-32.9 69.6-26.1 69.6-26.1 14.1 33.9 5.2 60 2.6 66.2 16.4 17.6 26.4 40 26.4 67.5 0 96.6-56.4 118-112.5 124.2 9.1 7.9 17.3 23.5 17.3 47.4 0 34.3-.3 61.5-.3 70 0 6.4 4.5 14.4 17.6 12.1C428.2 457.8 496 362.9 496 252 496 113.3 389.9 8 244.8 8z"/></svg>
+     </a>
+     <a href="https://www.linkedin.com/in/alex-araujo-7846a3317/" target="_blank" title="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
+     </a>
+</div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Alex Andryo da Silva Araujo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const introOverlay = document.getElementById('intro-overlay');
+            const textContainer = document.getElementById('intro-text-container');
+            const welcomeTexts = ["Bem-vindo", "Welcome", "Bienvenido"];
+            let textIndex = 0;
+
+            function showNextText() {
+                if (textIndex < welcomeTexts.length) {
+                    const textElement = document.createElement('div');
+                    textElement.className = 'intro-text';
+                    textElement.textContent = welcomeTexts[textIndex];
+                    textContainer.innerHTML = '';
+                    textContainer.appendChild(textElement);
+                    textIndex++;
+                } else {
+                    introOverlay.style.opacity = '0';
+                    setTimeout(() => {
+                        introOverlay.style.display = 'none';
+                    }, 700);
+                }
+            }
+
+            const intervalId = setInterval(showNextText, 1500);
+            setTimeout(() => {
+                clearInterval(intervalId);
+                showNextText();
+            }, 1500 * welcomeTexts.length);
+        });
+    </script>
+</body>
+</html>
