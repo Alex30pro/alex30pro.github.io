@@ -404,7 +404,7 @@ body::before {
     left: 0;
     width: 100vw; /* 100% da largura da tela */
     height: 100vh; /* 100% da altura da tela */
-    background-image: url('images/fundo-tech.jpg'); /* Caminho para a sua imagem */
+    background-image: url('imagens/fundo-tech.jpg'); /* Caminho para a sua imagem */
     background-size: cover;
     background-position: center;
     opacity: 0.1; /* A MÁGICA: Deixa a imagem bem sutil. Ajuste entre 0.05 e 0.2 para o seu gosto. */
