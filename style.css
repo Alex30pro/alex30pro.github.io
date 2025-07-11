@@ -1,4 +1,3 @@
-
 :root {
     --bg-primary: #0F172A; /* slate-900 */
     --surface: #1E293B;   /* slate-800 */
@@ -37,6 +36,8 @@ body {
     text-align: center;
     margin-bottom: 3rem;
 }
+
+/* --- MUDANÇA #1: AUMENTAR O TEXTO DO PRE-LOADER --- */
 #intro-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -53,12 +54,12 @@ body {
 }
 #intro-text-container {
     position: relative;
-    height: 3rem;
+    height: 5rem; /* AUMENTADO para caber o texto maior */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 3rem; /* AUMENTADO para dar mais destaque */
     font-weight: 600;
     color: var(--text-primary);
 }
@@ -70,6 +71,7 @@ body {
     50% { opacity: 1; transform: translateY(0); }
     100% { opacity: 0; transform: translateY(-1rem); }
 }
+
 header {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -129,8 +131,10 @@ header nav {
     position: relative;
     z-index: 10;
 }
+
+/* --- MUDANÇA #2: AUMENTAR A SAUDAÇÃO PRINCIPAL --- */
 .greeting {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(3rem, 7vw, 5rem); /* AUMENTADO para mais impacto */
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -145,6 +149,7 @@ header nav {
 @keyframes wave-animation {
     0% { transform: rotate(0.0deg) } 10% { transform: rotate(14.0deg) } 20% { transform: rotate(-8.0deg) } 30% { transform: rotate(14.0deg) } 40% { transform: rotate(-4.0deg) } 50% { transform: rotate(10.0deg) } 60% { transform: rotate(0.0deg) } 100% { transform: rotate(0.0deg) }
 }
+
 .subtitle {
     font-size: 1.25rem;
     color: var(--text-secondary);
@@ -217,192 +222,4 @@ header nav {
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
 }
-@media (min-width: 640px) { .language-cards { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 768px) { .language-cards { grid-template-columns: repeat(3, 1fr); } }
-.language-card {
-    position: relative;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    height: 7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    transition: transform 0.3s;
-    background-size: cover;
-    background-position: center;
-}
-.language-card:hover { transform: scale(1.05); }
-.card-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0,0,0,0.6);
-    backdrop-filter: blur(2px);
-}
-.card-content {
-    position: relative;
-    z-index: 10;
-    text-align: center;
-}
-.card-content p {
-    font-weight: 600;
-    font-size: 1.25rem;
-    color: white;
-}
-.card-content small {
-    color: #D1D5DB;
-}
-
-.skill-cards {
-    max-width: 896px;
-    margin-left: auto; margin-right: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-@media (min-width: 640px) { .skill-cards { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 1024px) { .skill-cards { grid-template-columns: repeat(6, 1fr); } }
-.skill-card {
-    text-align: center;
-    background: var(--surface);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--border);
-    transition: transform 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-.skill-card:hover { transform: translateY(-5px); }
-.skill-card i {
-    font-size: 3rem;
-    color: var(--text-primary);
-}
-.skill-card span { font-weight: 500; }
-
-.project-cards {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-    max-width: 1024px;
-    margin: auto;
-}
-@media (min-width: 768px) { .project-cards { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .project-cards { grid-template-columns: repeat(3, 1fr); } }
-.project-card {
-    background-color: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s, border-color 0.3s;
-}
-.project-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-purple);
-}
-.project-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
-.project-card p { color: var(--text-secondary); flex-grow: 1; margin-bottom: 1rem; }
-.project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
-.project-tags span {
-    background-color: var(--bg-primary);
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 500;
-}
-.project-card a {
-    color: var(--accent-purple);
-    font-weight: 600;
-    text-decoration: none;
-    margin-top: auto;
-}
-.project-card a.disabled { color: var(--text-secondary); cursor: not-allowed; }
-#contact { text-align: center; }
-.contact-subtitle {
-    max-width: 672px;
-    margin-left: auto; margin-right: auto;
-    text-align: center;
-    font-size: 1.125rem;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-}
-.contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-.contact-links a {
-    display: inline-block; 
-    padding: 0.5rem;      
-    color: var(--text-primary);
-    transition: color 0.3s, transform 0.3s;
-}
-.contact-links a:hover {
-    color: var(--accent-pink);
-    transform: translateY(-5px);
-}
-.contact-links svg {
-    width: 2rem;  /* 32px */
-    height: 2rem; /* 32px */
-}
-footer {
-    background-color: #020617; /* slate-950 */
-    border-top: 1px solid var(--border);
-    padding: 2rem 0;
-}
-footer .container {
-    text-align: center;
-    color: var(--text-secondary);
-}
-
-.profile-image-container {
-    position: relative; /* Essencial para o posicionamento das imagens dentro dele */
-}
-
-.profile-image-container .profile-image {
-    position: absolute; /* Coloca uma imagem em cima da outra */
-    inset: 0; /* Shorthand para top:0, right:0, bottom:0, left:0 */
-    transition: opacity 0.5s ease-in-out; /* A animação suave de troca */
-}
-
-.profile-image-container .image-ilustrada {
-    opacity: 0;
-}
-
-.profile-image-container:hover .image-real {
-    opacity: 0;
-}
-.profile-image-container:hover .image-ilustrada {
-    opacity: 1;
-}
-.profile-image-container .image-ilustrada {
-    object-fit: contain; /* Garante que a imagem inteira apareça, sem cortar */
-}
-.profile-image-container .image-real {
-    object-fit: contain;
-}
-
-body::before {
-    content: ''; /* Essencial para o pseudo-elemento funcionar */
-    position: fixed; /* Fica fixo e não rola com a página */
-    top: 0;
-    left: 0;
-    width: 100vw; /* 100% da largura da tela */
-    height: 100vh; /* 100% da altura da tela */
-    background-image: url('imagens/fundo-tech.jpg'); /* Caminho para a sua imagem */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.1; /* A MÁGICA: Deixa a imagem bem sutil. Ajuste entre 0.05 e 0.2 para o seu gosto. */
-    z-index: -1; /* Coloca a imagem atrás de todo o conteúdo */
-}
-/* EFEITO DE FADE PARA SAUDAÇÃO ANIMADA */
-#animated-greeting {
-    transition: opacity 0.4s ease-in-out;
-}
-#animated-greeting.fade-out {
-    opacity: 0;
-}
+@media (min-width: 640px) { .
