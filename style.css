@@ -9,7 +9,6 @@
     --accent-pink: #EC4899;   /* pink-500 */
     --font-family: 'Inter', sans-serif;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -38,7 +37,6 @@ body {
     text-align: center;
     margin-bottom: 3rem;
 }
-
 #intro-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -72,7 +70,6 @@ body {
     50% { opacity: 1; transform: translateY(0); }
     100% { opacity: 0; transform: translateY(-1rem); }
 }
-
 header {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -106,7 +103,6 @@ header nav {
     align-items: center;
     gap: 1.5rem;
 }
-
 #hero {
     position: relative;
     text-align: center;
@@ -182,7 +178,6 @@ header nav {
     transform: translateY(-3px);
     box-shadow: 0 7px 14px rgba(0,0,0,0.2);
 }
-
 .about-content {
     max-width: 896px;
     margin-left: auto;
@@ -215,7 +210,6 @@ header nav {
     .about-text { text-align: left; }
 }
 .about-text p { margin-bottom: 1rem; }
-
 .language-cards {
     max-width: 896px;
     margin-left: auto; margin-right: auto;
@@ -225,7 +219,6 @@ header nav {
 }
 @media (min-width: 640px) { .language-cards { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 768px) { .language-cards { grid-template-columns: repeat(3, 1fr); } }
-
 .language-card {
     position: relative;
     border-radius: 0.5rem;
@@ -270,7 +263,6 @@ header nav {
 }
 @media (min-width: 640px) { .skill-cards { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1024px) { .skill-cards { grid-template-columns: repeat(6, 1fr); } }
-
 .skill-card {
     text-align: center;
     background: var(--surface);
@@ -299,7 +291,6 @@ header nav {
 }
 @media (min-width: 768px) { .project-cards { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .project-cards { grid-template-columns: repeat(3, 1fr); } }
-
 .project-card {
     background-color: var(--surface);
     border: 1px solid var(--border);
@@ -330,7 +321,6 @@ header nav {
     margin-top: auto;
 }
 .project-card a.disabled { color: var(--text-secondary); cursor: not-allowed; }
-
 #contact { text-align: center; }
 .contact-subtitle {
     max-width: 672px;
@@ -359,7 +349,6 @@ header nav {
     width: 2rem;  /* 32px */
     height: 2rem; /* 32px */
 }
-
 footer {
     background-color: #020617; /* slate-950 */
     border-top: 1px solid var(--border);
@@ -409,4 +398,11 @@ body::before {
     background-position: center;
     opacity: 0.1; /* A MÁGICA: Deixa a imagem bem sutil. Ajuste entre 0.05 e 0.2 para o seu gosto. */
     z-index: -1; /* Coloca a imagem atrás de todo o conteúdo */
+}
+/* EFEITO DE FADE PARA SAUDAÇÃO ANIMADA */
+#animated-greeting {
+    transition: opacity 0.4s ease-in-out;
+}
+#animated-greeting.fade-out {
+    opacity: 0;
 }
