@@ -8,15 +8,27 @@
     --accent-pink: #EC4899;   /* pink-500 */
     --font-family: 'Inter', sans-serif;
 }
+
+/* CORES DO TEMA CLARO */
+body.light-mode {
+    --bg-primary: #F8FAFC;    /* slate-50 */
+    --surface: #FFFFFF;      /* white */
+    --border: #E2E8F0;       /* slate-200 */
+    --text-primary: #0F172A;  /* slate-900 */
+    --text-secondary: #475569; /* slate-600 */
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+html { scroll-behavior: smooth; }
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: var(--font-family);
+    transition: background-color 0.3s, color 0.3s;
 }
 .container {
     max-width: 1120px;
@@ -37,51 +49,50 @@ body {
     margin-bottom: 3rem;
 }
 
-/* --- MUDANÇA #1: AUMENTADO O TEXTO DO PRE-LOADER --- */
+/* PRE-LOADER ATUALIZADO */
 #intro-overlay {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-color: rgba(15, 23, 42, 0.7);
-    backdrop-filter: blur(8px);
+    background-color: var(--bg-primary); /* Usa a cor de fundo correta */
     z-index: 100;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: opacity 0.7s ease-in-out;
     overflow: hidden;
 }
 #intro-text-container {
-    position: relative;
-    height: 5rem; /* AUMENTADO para caber o texto maior */
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3.5rem; /* AUMENTADO para dar mais destaque */
+    height: 5rem;
+    width: 90%;
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 3.5rem); /* Tamanho de fonte aumentado e responsivo */
     font-weight: 700;
     color: var(--text-primary);
 }
 .intro-text {
-    animation: fadeInOut 2.5s ease-in-out forwards; /* Ajustado o tempo da animação */
+    animation: fadeInOut 2.5s ease-in-out forwards;
 }
 @keyframes fadeInOut {
     0% { opacity: 0; transform: translateY(1rem); }
-    20% { opacity: 1; transform: translateY(0); } /* Aparece mais rápido */
-    80% { opacity: 1; transform: translateY(0); } /* Fica mais tempo visível */
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
     100% { opacity: 0; transform: translateY(-1rem); }
 }
 
+/* CABEÇALHO E NAVEGAÇÃO */
 header {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 40;
     background-color: rgba(15, 23, 42, 0.8);
     backdrop-filter: blur(4px);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    border-bottom: 1px solid var(--border);
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+body.light-mode header { /* Ajuste para o tema claro */
+     background-color: rgba(248, 250, 252, 0.8);
 }
 header .container {
     display: flex;
@@ -106,12 +117,12 @@ header nav {
     align-items: center;
     gap: 1.5rem;
 }
+
+/* SEÇÃO HERO */
 #hero {
     position: relative;
     text-align: center;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    overflow: hidden;
+    padding: 5rem 1rem;
     min-height: 80vh;
     display: flex;
     align-items: center;
@@ -132,12 +143,11 @@ header nav {
     position: relative;
     z-index: 10;
 }
-
-/* --- MUDANÇA #2: AUMENTADO A SAUDAÇÃO PRINCIPAL --- */
 .greeting {
-    font-size: clamp(3rem, 7vw, 5rem); /* AUMENTADO para mais impacto */
+    font-size: clamp(3rem, 7vw, 5rem); /* AUMENTADO */
     font-weight: 700;
     margin-bottom: 1rem;
+    min-height: 80px; /* Altura mínima para evitar 'pulos' na troca de texto */
 }
 .greeting .highlight {
     color: var(--accent-purple);
@@ -150,11 +160,13 @@ header nav {
 @keyframes wave-animation {
     0% { transform: rotate(0.0deg) } 10% { transform: rotate(14.0deg) } 20% { transform: rotate(-8.0deg) } 30% { transform: rotate(14.0deg) } 40% { transform: rotate(-4.0deg) } 50% { transform: rotate(10.0deg) } 60% { transform: rotate(0.0deg) } 100% { transform: rotate(0.0deg) }
 }
-
 .subtitle {
     font-size: 1.25rem;
     color: var(--text-secondary);
     margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .button-group {
     display: flex;
@@ -180,10 +192,16 @@ header nav {
     background-color: #334155;
     color: white;
 }
+body.light-mode .secondary-button {
+    background-color: var(--border);
+    color: var(--text-primary);
+}
 .main-button:hover, .secondary-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 7px 14px rgba(0,0,0,0.2);
 }
+
+/* OUTRAS SEÇÕES */
 .about-content {
     max-width: 896px;
     margin-left: auto;
@@ -220,7 +238,6 @@ header nav {
 .profile-image-container:hover .image-ilustrada {
     opacity: 1;
 }
-
 .about-text {
     font-size: 1.125rem;
     color: var(--text-secondary);
@@ -310,7 +327,6 @@ header nav {
     margin: auto;
 }
 @media (min-width: 768px) { .project-cards { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .project-cards { grid-template-columns: repeat(3, 1fr); } }
 .project-card {
     background-color: var(--surface);
     border: 1px solid var(--border);
@@ -374,23 +390,30 @@ footer {
     border-top: 1px solid var(--border);
     padding: 2rem 0;
 }
+body.light-mode footer { /* Ajuste para o tema claro */
+    background-color: var(--surface);
+}
 footer .container {
     text-align: center;
     color: var(--text-secondary);
 }
 
 body::before {
-    content: ''; 
+    content: '';
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('imagens/fundo-tech.jpg');
+    background-image: url('images/fundo-tech.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.1; 
     z-index: -1;
+    transition: opacity 0.3s;
+}
+body.light-mode::before { /* Esconde a imagem de fundo no tema claro */
+    opacity: 0.03;
 }
 
 #animated-greeting {
@@ -398,4 +421,39 @@ body::before {
 }
 #animated-greeting.fade-out {
     opacity: 0;
+}
+.theme-toggle-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    padding: 0.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.theme-toggle-btn:hover {
+    background-color: var(--surface);
+}
+.theme-toggle-btn svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+.hidden {
+    display: none;
+}
+.lang-toggle-btn {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.lang-toggle-btn:hover {
+    background-color: var(--border);
+    color: var(--text-primary);
 }
