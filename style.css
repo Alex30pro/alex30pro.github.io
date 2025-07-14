@@ -13,6 +13,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* CORES DO TEMA CLARO */
+body.light-mode {
+    --bg-primary: #F8FAFC;    /* slate-50 */
+    --surface: #FFFFFF;      /* white */
+    --border: #E2E8F0;       /* slate-200 */
+    --text-primary: #0F172A;  /* slate-900 */
+    --text-secondary: #475569; /* slate-600 */
+}
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
@@ -398,4 +406,24 @@ body::before {
 }
 #animated-greeting.fade-out {
     opacity: 0;
+}
+/* ESTILO DO BOTÃO DE TEMA */
+.theme-toggle-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    padding: 0.25rem;
+    border-radius: 50%;
+}
+.theme-toggle-btn:hover {
+    background-color: var(--surface);
+}
+.theme-toggle-btn svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+/* A classe .hidden será usada pelo JS para mostrar/esconder o ícone certo */
+.hidden {
+    display: none;
 }
