@@ -405,7 +405,7 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('images/fundo-tech.jpg');
+    background-image: url('imagens/fundo-tech.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.1; 
