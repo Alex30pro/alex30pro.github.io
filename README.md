@@ -36,20 +36,17 @@ Este projeto foi construído do zero, focando em performance e nas tecnologias w
 ### 📁 Estrutura do Projeto
 
 O projeto está organizado na seguinte estrutura de pastas para uma fácil manutenção:
+
+```
 seu-portfolio/
 ├── 📄 index.html
-```
 ├── 📄 style.css
-```
 ├── 📄 favicon.svg
-```
 └── 📁 images/
-```
 ├── 🖼️ fundo-tech.jpg
-```
 ├── 🖼️ foto-real.png
-```
 └── 🖼️ foto-ilustrada.png
+```
 
 ---
 
