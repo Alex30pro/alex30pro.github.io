@@ -118,24 +118,38 @@
        <section id="projects" class="section-divider">
             <h2 class="section-title" data-lang-pt="Projetos em Destaque" data-lang-en="Featured Projects">Projetos em Destaque</h2>
             <div class="project-cards">
-                <div class="project-card">
-                    <h3 data-lang-pt="Site para Estúdio de Tatuagem" data-lang-en="Tattoo Studio Website">Site para Estúdio de Tatuagem</h3>
-                    <p data-lang-pt="Website completo e responsivo para o estúdio Meraki Tattoo, focado em design minimalista, galeria interativa e identidade visual da artista." data-lang-en="A complete and responsive website for Meraki Tattoo studio, focused on minimalist design, an interactive gallery, and the artist's visual identity.">Website completo e responsivo para o estúdio Meraki Tattoo, focado em design minimalista, galeria interativa e identidade visual da artista.</p>
-                    <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                    <div class="project-links">
-                        <a href="https://alex30pro.github.io/site-meraki-tattoo/" target="_blank" class="project-link" data-lang-pt="Ver Site" data-lang-en="View Site">Ver Site</a>
-                        <a href="https://github.com/alex30pro/site-meraki-tattoo" target="_blank" class="project-link" data-lang-pt="Ver Código" data-lang-en="View Code">Ver Código</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3 data-lang-pt="Bem-Estar Estudantil" data-lang-en="Student Well-being">Bem-Estar Estudantil</h3>
-                    <p data-lang-pt="Projeto conceitual de um Hackathon para aumentar a segurança e bem-estar em escolas, usando reconhecimento facial e análise de humor." data-lang-en="A conceptual project from a Hackathon to increase security and well-being in schools, using facial recognition and mood analysis.">Projeto conceitual de um Hackathon para aumentar a segurança e bem-estar em escolas, usando reconhecimento facial e análise de humor.</p>
-                    <div class="project-tags"><span>Visão de Produto</span><span>Inovação</span></div>
-                    <div class="project-links">
-                        <span class="project-link disabled" data-lang-pt="Conceitual" data-lang-en="Conceptual">Conceitual</span>
-                    </div>
-                </div>
-            </div>
+                <div class="project-cards">
+
+    <div class="project-card">
+        <h3 data-lang-pt="Quiz de Segurança da Informação" data-lang-en="Information Security Quiz">Quiz de Segurança da Informação</h3>
+        <p data-lang-pt="Quiz gamificado com perguntas aleatórias, timer e placar de líderes salvo no navegador. Um projeto complexo para demonstrar lógica com JavaScript puro." data-lang-en="Gamified quiz with random questions, a timer, and a leaderboard saved in the browser. A complex project to demonstrate pure JavaScript logic.">Quiz gamificado com perguntas aleatórias, timer e placar de líderes salvo no navegador. Um projeto complexo para demonstrar lógica com JavaScript puro.</p>
+        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="project-links">
+            <a href="https://alex30pro.github.io/quiz-seguranca/" target="_blank" class="project-link" data-lang-pt="Jogar Agora" data-lang-en="Play Now">Jogar Agora</a>
+            <a href="https://github.com/alex30pro/quiz-seguranca" target="_blank" class="project-link" data-lang-pt="Ver Código" data-lang-en="View Code">Ver Código</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <h3 data-lang-pt="Site para Estúdio de Tatuagem" data-lang-en="Tattoo Studio Website">Site para Estúdio de Tatuagem</h3>
+        <p data-lang-pt="Website completo e responsivo para o estúdio Meraki Tattoo, focado em design minimalista, galeria interativa e identidade visual da artista." data-lang-en="A complete and responsive website for Meraki Tattoo studio, focused on minimalist design, an interactive gallery, and the artist's visual identity.">Website completo e responsivo para o estúdio Meraki Tattoo, focado em design minimalista, galeria interativa e identidade visual da artista.</p>
+        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="project-links">
+            <a href="https://alex30pro.github.io/site-meraki-tattoo/" target="_blank" class="project-link" data-lang-pt="Ver Site" data-lang-en="View Site">Ver Site</a>
+            <a href="https://github.com/alex30pro/site-meraki-tattoo" target="_blank" class="project-link" data-lang-pt="Ver Código" data-lang-en="View Code">Ver Código</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <h3 data-lang-pt="Bem-Estar Estudantil" data-lang-en="Student Well-being">Bem-Estar Estudantil</h3>
+        <p data-lang-pt="Projeto conceitual de um Hackathon para aumentar a segurança e bem-estar em escolas, usando reconhecimento facial e análise de humor." data-lang-en="A conceptual project from a Hackathon to increase security and well-being in schools, using facial recognition and mood analysis.">Projeto conceitual de um Hackathon para aumentar a segurança e bem-estar em escolas, usando reconhecimento facial e análise de humor.</p>
+        <div class="project-tags"><span>Visão de Produto</span><span>Inovação</span></div>
+        <div class="project-links">
+            <span class="project-link disabled" data-lang-pt="Conceitual" data-lang-en="Conceptual">Conceitual</span>
+        </div>
+    </div>
+
+</div>
         </section>
 
         <section id="contact" class="section-divider">
@@ -207,13 +221,11 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <script>
-// LÓGICA PARA O SELETOR DE TEMA (LIGHT/DARK MODE)
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggleButton = document.getElementById('theme-toggle');
     const sunIcon = document.getElementById('theme-icon-sun');
     const moonIcon = document.getElementById('theme-icon-moon');
 
-    // Função para aplicar o tema e o ícone correto
     function applyTheme(theme) {
         if (theme === 'light') {
             document.body.classList.add('light-mode');
@@ -225,22 +237,18 @@ document.addEventListener('DOMContentLoaded', () => {
             moonIcon.classList.remove('hidden');
         }
     }
-
-    // Verifica se já existe um tema salvo no navegador
-    const savedTheme = localStorage.getItem('theme') || 'dark'; // Padrão é escuro
+    const savedTheme = localStorage.getItem('theme') || 'dark'; 
     applyTheme(savedTheme);
 
-    // Adiciona o evento de clique ao botão
     themeToggleButton.addEventListener('click', () => {
         let newTheme = document.body.classList.contains('light-mode') ? 'dark' : 'light';
         applyTheme(newTheme);
-        localStorage.setItem('theme', newTheme); // Salva a nova preferência
+        localStorage.setItem('theme', newTheme); 
     });
 });
 </script>
 
 <script>
-// LÓGICA PARA O SELETOR DE IDIOMA
 document.addEventListener('DOMContentLoaded', () => {
     const languageToggleButton = document.getElementById('language-toggle');
     const translatableElements = document.querySelectorAll('[data-lang-pt]');
