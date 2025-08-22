@@ -18,11 +18,6 @@
 </head>
 <body class="bg-primary text-primary">
 
-    <div id="intro-overlay">
-        <div id="intro-text-container">
-            </div>
-    </div>
-
     <header>
         <div class="container">
             <a href="#" class="nav-link logo" data-lang-pt="Alex Araujo" data-lang-en="Alex Araujo">Alex Araujo</a>
@@ -180,31 +175,7 @@
             <p>&copy; 2025 Alex Andryo da Silva Araujo. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const introOverlay = document.getElementById('intro-overlay');
-        const textContainer = document.getElementById('intro-text-container');
-        const welcomeTexts = ["Bem-vindo", "Welcome", "Bienvenido"];
-        let textIndex = 0;
-
-        function showNextText() {
-            if (textIndex < welcomeTexts.length) {
-                const textElement = document.createElement('div');
-                textElement.className = 'intro-text';
-                textElement.textContent = welcomeTexts[textIndex];
-                textContainer.innerHTML = '';
-                textContainer.appendChild(textElement);
-                textIndex++;
-            } else {
-                introOverlay.style.opacity = '0';
-                setTimeout(() => {
-                    introOverlay.style.display = 'none';
-                }, 700);
-            }
-        }
-        const intervalId = setInterval(showNextText, 2500); 
-    });
-</script>
+  
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const greetingElement = document.getElementById('animated-greeting');
@@ -282,5 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
 
 
